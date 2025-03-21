@@ -1,0 +1,35 @@
+[project]
+name = "gtc25-shortest-hackathon"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "nvidia-ace",
+    "protobuf-gen==0.0.4",
+    "PyYAML==6.0.1",
+    "grpclib==0.4.7",
+    "googleapis-common-protos==1.60.0",
+    "protobuf==4.24.1",
+    "protobuf-gen==0.0.4",
+    "scipy>=1.15.2",
+    "pandas>=2.2.3",
+    "langchain-community>=0.3.20",
+    "beautifulsoup4>=4.13.3",
+    "langchain-chroma>=0.1.2",
+    "python-dotenv>=1.0.1",
+    "langchain-nvidia-ai-endpoints>=0.3.9",
+    "openai>=1.67.0",
+    "nvidia-riva-client>=2.13.1,<2.14.5",
+    "pyaudio>=0.2.14",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtc25_shortest_hackathon"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+nvidia-ace = { path = "src/gtc25_shortest_hackathon/audio2face_3d/proto/sample_wheel/nvidia_ace-1.2.0-py3-none-any.whl" }
